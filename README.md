@@ -151,7 +151,7 @@ Yoruba | 31.6595 / 11.6599 / 25.0898
   * See [training and evaluation module.](seq2seq/)
 
 ## License
-Contents of this repository are restricted to only non-commercial research purposes under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Copyright of the dataset contents belongs to the original copyright holders.
+Contents of this repository are restricted to only non-commercial research purposes under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). Copyright of the dataset contents belongs to the original copyright holders.
 
 ## Citation
 If you use any of the datasets, models or code modules, please cite the following paper:
