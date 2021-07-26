@@ -1,6 +1,6 @@
 # XL-Sum
 
-This repository contains the code, data, and models of the paper titled [**"XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages"**](http://arxiv.org/abs/2106.13822) published in *Findings of the Association for Computational Linguistics: ACL 2021.*
+This repository contains the code, data, and models of the paper titled [**"XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages"**](https://aclanthology.org/2021.findings-acl.413/) published in *Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.*
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This repository contains the code, data, and models of the paper titled [**"XL-S
   
   We are releasing two versions of the dataset: an older version that has been reported in the paper; and a newer version with **another added language (Traditional Chinese)**, more data, better formatting, better extraction, larger evaluation splits, and deduplication. We recommend using the latter and thus have organized the repository with data counts and benchmarks of the newer version. The new version contains a total of **1.35 million** article-summary pairs, making XL-Sum the **largest** text summarization dataset publicly available.
   
-  All dataset files are in `.jsonl` format i.e. one JSON per line. One example from the english dataset is given below in JSON format. The fields are self-explanatory.  
+  All dataset files are in `.jsonl` format i.e. one JSON per line. One example from the `English` dataset is given below in JSON format. The fields are self-explanatory.  
   ```
   {
     "id": "technology-17657859",
@@ -156,21 +156,22 @@ Contents of this repository are restricted to only non-commercial research purpo
 ## Citation
 If you use any of the datasets, models or code modules, please cite the following paper:
 ```
-@inproceedings{hasan-etal-2021-xlsum,
-    title = "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages",
+@inproceedings{hasan-etal-2021-xl,
+    title = "{XL}-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages",
     author = "Hasan, Tahmid  and
       Bhattacharjee, Abhik  and
-      Islam, Md Saiful and
-      Samin, Kazi  and
-      Li, Yuan-Fang and
-      Kang, Yong-Bin and 
+      Islam, Md. Saiful  and
+      Mubasshir, Kazi  and
+      Li, Yuan-Fang  and
+      Kang, Yong-Bin  and
       Rahman, M. Sohel  and
       Shahriyar, Rifat",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2021",
-    month = "August",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
     year = "2021",
     address = "Online",
     publisher = "Association for Computational Linguistics",
-    url = "http://arxiv.org/abs/2106.13822"
+    url = "https://aclanthology.org/2021.findings-acl.413",
+    pages = "4693--4703",
 }
 ```
