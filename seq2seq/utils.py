@@ -703,7 +703,7 @@ def calculate_rouge(
          Dict[score: value] if aggregate else defaultdict(list) keyed by rouge_keys
 
     """
-    logger.info("Rouge lang: " + rouge_lang)
+    logger.info("Rouge lang: " + str(rouge_lang))
     scorer = rouge_scorer.RougeScorer(
         rouge_keys, lang=rouge_lang,
         use_stemmer=use_stemmer
