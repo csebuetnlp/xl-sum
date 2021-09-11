@@ -3,7 +3,7 @@ We use a modified fork of [huggingface transformers](https://github.com/huggingf
 ## Setup
 
 ```bash
-$ git clone https://https://github.com/csebuetnlp/xl-sum
+$ git clone https://github.com/csebuetnlp/xl-sum
 $ cd xl-sum/seq2seq
 $ conda create python==3.7.9 pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.2 -c pytorch -p ./env
 $ conda activate ./env # or source activate ./env (for older versions of anaconda)
