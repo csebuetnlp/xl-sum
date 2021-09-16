@@ -2,6 +2,11 @@
 
 This repository contains the code, data, and models of the paper titled [**"XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages"**](https://aclanthology.org/2021.findings-acl.413/) published in *Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.*
 
+## Updates
+* XL-Sum is now on [ExplainaBoard](https://github.com/neulab/ExplainaBoard)! The leaderboard can be found [here](http://explainaboard.nlpedia.ai/leaderboard/task_xlsum/).
+* XL-Sum can now be downloaded via [HuggingFace Datasets](https://huggingface.co/datasets/csebuetnlp/xlsum).
+
+
 ## Table of Contents
 
 - [XL-Sum](#xl-sum)
