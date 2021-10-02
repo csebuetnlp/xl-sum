@@ -5,6 +5,7 @@ This repository contains the code, data, and models of the paper titled [**"XL-S
 ## Updates
 * XL-Sum is now on [ExplainaBoard](https://github.com/neulab/ExplainaBoard)! The leaderboard can be found [here](http://explainaboard.nlpedia.ai/leaderboard/task_xlsum/).
 * XL-Sum can now be downloaded via [HuggingFace Datasets](https://huggingface.co/datasets/csebuetnlp/xlsum).
+* The multilingual checkpoint is also available at [Huggingface Model Hub](https://huggingface.co/csebuetnlp/mT5_multilingual_XLSum).
 
 
 ## Table of Contents
