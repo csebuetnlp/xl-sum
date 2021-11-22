@@ -12,7 +12,7 @@ ROUGE is the de facto evaluation metric used for text summarization. However, it
 `bengali`, `hindi`, `turkish`, `arabic`, `danish`, `dutch`, `english`, `finnish`, `french`, `german`, `hungarian`, `italian`, `norwegian`, `portuguese`, `romanian`, `russian`, `spanish`, `swedish`
 
 ### Supported language names for word segmentation
-`chinese`, `thai`, `japanese`
+`chinese`, `thai`, `japanese`, `burmese`
 
 ## Setup
 ```bash

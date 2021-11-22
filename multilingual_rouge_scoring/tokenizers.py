@@ -230,9 +230,56 @@ class JapaneseTokenizer(object):
 	def __call__(self, text):
 		return whitespace_tokenize(self.tokenizer.parse(text))
 
+class BurmeseTokenizer(object):
+  """Implementation taken from https://dl.acm.org/doi/fullHtml/10.1145/3325885"""
+
+  def __init__(self):
+    self.X = chr (0x103a)
+    self.T = chr (0x1037)
+    self.STACK = chr (0x1039)
+    self.TX = self.T + self.X
+    self.XT = self.X + self.T
+
+    self.DEP = set ([chr(0x102b + x) for x in range (8)])
+    self.DEP |= set ([chr(0x1036 + x) for x in range (3)])
+    self.DEP |= set ([chr(0x103b + x) for x in range (4)])
+    self.DEP.add(self.X)
+
+  def __call__(self, text):
+    try:
+      text = text.replace(chr(0x200c), ' ')
+      text = text.replace(self.TX, self.XT)
+      text = list(''.join(text.lower().strip().split()))
+      
+      ### generate basic units
+      text.reverse ()
+      for i in range(len(text) - 1): 
+        if text[i][0] in self.DEP:
+          text[i + 1] += text[i] 
+          text[i] = ''
+
+      text.reverse()
+
+      ### attach asat units (len < 4 to avoid au)
+      text = ' '.join(text).split()
+      for i in range (1, len(text)):
+        if self.X in text[i] and len(text[i]) < 4:
+          text[i - 1] += text[i]
+          text[i] = ''
+
+      ### glue stacked units
+      text = ' '.join(text).split()
+      text = ' '.join(text).replace(' '+ self.STACK + ' ', self.STACK)
+    except:
+      pass
+
+    return text.split()
+
+
 LANG2TOKENIZER = {
 	"thai": ThaiTokenizer,
 	"chinese": ChineseTokenizer,
-	"japanese": JapaneseTokenizer
+	"japanese": JapaneseTokenizer,
+  "burmese": BurmeseTokenizer
 }
 
