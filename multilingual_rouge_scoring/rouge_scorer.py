@@ -49,7 +49,7 @@ import warnings
 SPECIAL_LANGID_CONVERSION_MAP = {
 	"bengali": ["bangla"],
 	"turkish": ["turkce"],
-	"chinese": ["ukchina", "zhongwen", "chinese_simp", "chinese_trad"],
+	"chinese": ["chinese_simplified", "chinese_traditional"],
 	"spanish": ["mundo"]
 }
 SPECIAL_LANGID_CONVERSION_MAP = {
