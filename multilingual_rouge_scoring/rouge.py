@@ -26,7 +26,8 @@ rouge ---rouge_types=rouge1,rouge2,rougeL \
     --target_filepattern=*.targets \
     --prediction_fliepattern=*.decodes \
     --output_filename=scores.csv \
-    --use_stemmer
+    --use_stemmer # (optional)
+    --lang=<lang_name> # (optional)
 
 Which is equivalent to calling the perl ROUGE script as:
 
@@ -68,7 +69,7 @@ FLAGS = flags.FLAGS
 def main(argv):
   if len(argv) > 1:
     raise app.UsageError("Too many command-line arguments.")
-  scorer = rouge_scorer.RougeScorer(FLAGS.rouge_types, FLAGS.use_stemmer, lang=FLAGS.lang)
+  scorer = rouge_scorer.RougeScorer(FLAGS.rouge_types, use_stemmer=FLAGS.use_stemmer, lang=FLAGS.lang)
   aggregator = scoring.BootstrapAggregator() if FLAGS.aggregate else None
   io.compute_scores_and_write_to_csv(
       FLAGS.target_filepattern,

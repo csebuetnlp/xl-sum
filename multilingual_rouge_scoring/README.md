@@ -26,7 +26,7 @@ pip3 install --upgrade ./
 
 ### Using CLI
 ```bash
-python -m rouge.rouge \
+python -m rouge_score.rouge \
     --target_filepattern=*.targets \
     --prediction_filepattern=*.decodes \
     --output_filename=scores.csv \
